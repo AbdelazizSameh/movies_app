@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+import 'package:movies_app/core/utils/app_routes.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../core/widgets/custom_button.dart';
@@ -44,7 +46,12 @@ class OnboardingContent extends StatelessWidget {
                 ),
               ),
             const SizedBox(height: 24),
-            CustomButton(text: model.buttonText, onPressed: () => cubit.next()),
+            CustomButton(
+              text: model.buttonText,
+              onPressed: () => cubit.isLastPage
+                  ? GoRouter.of(context).pushReplacement(AppRoutes.loginPath)
+                  : cubit.next(),
+            ),
             if (cubit.notFirstPage) ...[
               const SizedBox(height: 16),
               CustomButton(
