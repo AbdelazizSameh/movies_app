@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'Features/splash/presentation/views/splash_view.dart';
+import 'package:movies_app/core/utils/app_router.dart';
+import 'core/utils/app_colors.dart';
 
 void main() {
   runApp(const MoviesApp());
@@ -10,9 +11,10 @@ class MoviesApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp.router(
+      theme: ThemeData(scaffoldBackgroundColor: AppColors.bgColor),
       debugShowCheckedModeBanner: false,
-      home: SplashView(),
+      routerConfig: AppRouter.routerConfig,
     );
   }
 }
