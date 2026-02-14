@@ -18,7 +18,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   }
 
   Future navigateAfterDelay() {
-    return Future.delayed(const Duration(seconds: 4), () {
+    return Future.delayed(const Duration(seconds: 2), () {
       if (!mounted) return;
       context.pushReplacement(AppRoutes.onBoardingPath);
     });

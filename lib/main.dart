@@ -18,7 +18,6 @@ class MoviesApp extends StatelessWidget {
         scaffoldBackgroundColor: AppColors.bgColor,
       ),
       debugShowCheckedModeBanner: false,
-      
       routerConfig: AppRouter.routerConfig,
     );
   }

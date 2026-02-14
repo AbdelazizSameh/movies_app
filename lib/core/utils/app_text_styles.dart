@@ -13,7 +13,7 @@ abstract class AppTextStyles {
     fontSize: 24,
     fontWeight: FontWeight.bold,
   );
-  static final textStyle20Inter = _base.copyWith(fontSize: 19);
+  static final textStyle20Inter = _base.copyWith(fontSize: 18);
 
   //roboto fontFamily
   static final textStyle24Roboto = _base.copyWith(
