@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:movies_app/core/utils/app_routes.dart';
-import '../../../../../core/utils/assets_paths.dart';
+import '../../../../../core/widgets/app_logo.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -26,6 +26,6 @@ class _SplashViewBodyState extends State<SplashViewBody> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Image.asset(AssetsPaths.logo, height: 100));
+    return const Center(child: AppLogo(height: 100));
   }
 }
