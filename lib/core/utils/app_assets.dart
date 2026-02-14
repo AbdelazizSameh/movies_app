@@ -1,4 +1,4 @@
-abstract class AssetsPaths {
+abstract class AppAssets {
   static const String logo = 'assets/images/logo.png';
   static const String samMendes =
       'assets/images/onboarding/1917_Sam_Mendes.png';

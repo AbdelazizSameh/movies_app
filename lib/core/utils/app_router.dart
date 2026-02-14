@@ -6,10 +6,10 @@ import 'package:movies_app/core/utils/app_routes.dart';
 abstract class AppRouter {
    static GoRouter routerConfig = GoRouter(
     routes: [
-      GoRoute(
-        path: AppRoutes.splashPath,
-        builder: (context, state) => const SplashView(),
-      ),
+      // GoRoute(
+      //   path: AppRoutes.splashPath,
+      //   builder: (context, state) => const SplashView(),
+      // ),
       GoRoute(
         path: AppRoutes.onBoardingPath,
         builder: (context, state) => const OnboardingView(),

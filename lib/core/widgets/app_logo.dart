@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../utils/assets_paths.dart';
+import '../utils/app_assets.dart';
 
 class AppLogo extends StatelessWidget {
   const AppLogo({super.key, this.width, this.height});
@@ -8,6 +8,6 @@ class AppLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset(AssetsPaths.logo, height: height);
+    return Image.asset(AppAssets.logo, height: height);
   }
 }
