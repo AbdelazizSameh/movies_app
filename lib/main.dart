@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Features/auth/presentation/views/login_view.dart';
+import 'Features/splash/presentation/views/splash_view.dart';
 
 void main() {
   runApp(const MoviesApp());
@@ -10,6 +10,9 @@ class MoviesApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: LoginView());
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SplashView(),
+    );
   }
 }
