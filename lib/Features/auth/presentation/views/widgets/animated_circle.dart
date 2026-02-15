@@ -21,7 +21,7 @@ class AnimatedCircle extends StatelessWidget {
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         border: Border.all(
-          color: isSelected ? AppColors.primaryColor : Colors.black,
+          color: isSelected ? AppColors.primaryColor : AppColors.bgColor,
           width: 5,
         ),
       ),

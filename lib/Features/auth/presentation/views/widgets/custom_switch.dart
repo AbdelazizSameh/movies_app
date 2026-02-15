@@ -17,7 +17,7 @@ class _CustomSwitchState extends State<CustomSwitch> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color: AppColors.primaryColor),
+        border: Border.all(color: AppColors.primaryColor, width: 3),
         borderRadius: BorderRadius.circular(30),
       ),
       child: Row(
@@ -25,18 +25,14 @@ class _CustomSwitchState extends State<CustomSwitch> {
         spacing: 20,
         children: [
           GestureDetector(
-            onTap: () {
-              setState(() => isUsaSelected = true);
-            },
+            onTap: () => setState(() => isUsaSelected = true),
             child: AnimatedCircle(
               image: AppAssets.usaFlag,
               isSelected: isUsaSelected,
             ),
           ),
           GestureDetector(
-            onTap: () {
-              setState(() => isUsaSelected = false);
-            },
+            onTap: () => setState(() => isUsaSelected = false),
             child: AnimatedCircle(
               image: AppAssets.egyFlag,
               isSelected: !isUsaSelected,
