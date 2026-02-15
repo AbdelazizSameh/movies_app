@@ -13,7 +13,7 @@ class CustomTextFormField extends StatelessWidget {
   final String? hintText;
   final String? labelText;
   final String? prefixIcon;
-  final String? suffixIcon;
+  final IconData? suffixIcon;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -33,7 +33,10 @@ class CustomTextFormField extends StatelessWidget {
           : Image.asset(prefixIcon!, width: 26, height: 30),
       suffixIcon: suffixIcon == null
           ? null
-          : Image.asset(suffixIcon!, width: 16, color: Colors.white),
+          : IconButton(
+              onPressed: () {},
+              icon: Icon(suffixIcon, size: 28, color: Colors.white),
+            ),
       hintText: hintText,
       hintStyle: AppTextStyles.textStyle16Roboto.copyWith(color: Colors.grey),
       labelText: labelText,

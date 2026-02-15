@@ -27,7 +27,7 @@ class LoginViewBody extends StatelessWidget {
               hintText: "Enter your password",
               labelText: "Password",
               prefixIcon: AppAssets.lockIcon,
-              suffixIcon: AppAssets.visibilityOffIcon,
+              suffixIcon: Icons.visibility_off,
             ),
             const SizedBox(height: 40),
             CustomButton(text: 'Login', onPressed: () {}),
