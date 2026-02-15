@@ -52,15 +52,16 @@ class OnboardingContent extends StatelessWidget {
                   ? GoRouter.of(context).pushReplacement(AppRoutes.loginPath)
                   : cubit.next(),
             ),
-            if (cubit.notFirstPage) ...[
-              const SizedBox(height: 16),
-              CustomButton(
-                text: 'back',
-                onPressed: () => cubit.back(),
-                backgroundColor: AppColors.bgColor,
-                foregroundColor: AppColors.primaryColor,
+            if (cubit.notFirstPage)
+              Padding(
+                padding: const EdgeInsets.only(top: 16.0),
+                child: CustomButton(
+                  text: 'back',
+                  onPressed: () => cubit.back(),
+                  backgroundColor: AppColors.bgColor,
+                  foregroundColor: AppColors.primaryColor,
+                ),
               ),
-            ],
           ],
         ),
       ),
