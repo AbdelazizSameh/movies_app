@@ -16,6 +16,8 @@ abstract class AppAssets {
   /// login
   static const String emailIcon = 'assets/images/icons/email.png';
   static const String lockIcon = 'assets/images/icons/lock.png';
+  static const String usaFlag = 'assets/images/login/USA.png';
+  static const String egyFlag = 'assets/images/login/EGY.png';
   static const String visibilityOnIcon =
       'assets/images/icons/visibility_on.png';
   static const String visibilityOffIcon =

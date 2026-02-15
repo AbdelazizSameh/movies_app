@@ -24,6 +24,10 @@ abstract class AppRouter {
         path: AppRoutes.loginPath,
         builder: (context, state) => const LoginView(),
       ),
+      GoRoute(
+        path: AppRoutes.loginPath,
+        builder: (context, state) => const LoginView(),
+      ),
     ],
   );
 }

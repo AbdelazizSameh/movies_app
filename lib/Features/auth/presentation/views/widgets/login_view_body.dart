@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/utils/app_assets.dart';
-import 'package:movies_app/core/widgets/custom_button.dart';
+import 'package:go_router/go_router.dart';
+import '../../../../../core/utils/app_assets.dart';
+import '../../../../../core/utils/app_routes.dart';
 import '../../../../../core/widgets/app_logo.dart';
+import '../../../../../core/widgets/custom_button.dart';
+import 'custom_switch.dart';
 import 'custom_text_form_field.dart';
 
 class LoginViewBody extends StatelessWidget {
@@ -14,7 +17,7 @@ class LoginViewBody extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(height: 150),
+            const SizedBox(height: 190),
             const AppLogo(),
             const SizedBox(height: 69),
             CustomTextFormField(
@@ -24,13 +27,19 @@ class LoginViewBody extends StatelessWidget {
             ),
             const SizedBox(height: 22.4),
             CustomTextFormField(
-              hintText: "Enter your password",
               labelText: "Password",
+              hintText: "Enter your password",
               prefixIcon: AppAssets.lockIcon,
               suffixIcon: Icons.visibility_off,
             ),
             const SizedBox(height: 40),
-            CustomButton(text: 'Login', onPressed: () {}),
+            CustomButton(
+              text: 'Login',
+              onPressed: () =>
+                  GoRouter.of(context).pushReplacement(AppRoutes.homePath),
+            ),
+            const SizedBox(height: 40),
+            const CustomSwitch(),
           ],
         ),
       ),
