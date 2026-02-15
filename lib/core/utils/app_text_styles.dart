@@ -21,4 +21,8 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.bold,
     fontFamily: AppFonts.fontRoboto,
   );
+  static final textStyle16Roboto = _base.copyWith(
+    fontSize: 16,
+    fontFamily: AppFonts.fontRoboto,
+  );
 }
