@@ -1,6 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:movies_app/Features/auth/presentation/views/login_view.dart';
+import 'package:movies_app/Features/home/presentation/views/home_view.dart';
 import 'package:movies_app/Features/splash/presentation/manager/onboaerding_index_cubit.dart';
 import 'package:movies_app/Features/splash/presentation/views/onboarding_view.dart';
 import 'package:movies_app/Features/splash/presentation/views/splash_view.dart';
@@ -25,8 +26,8 @@ abstract class AppRouter {
         builder: (context, state) => const LoginView(),
       ),
       GoRoute(
-        path: AppRoutes.loginPath,
-        builder: (context, state) => const LoginView(),
+        path: AppRoutes.homePath,
+        builder: (context, state) => const HomeView(),
       ),
     ],
   );

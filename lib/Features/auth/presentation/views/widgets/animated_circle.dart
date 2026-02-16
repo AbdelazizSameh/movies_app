@@ -16,13 +16,13 @@ class AnimatedCircle extends StatelessWidget {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
       curve: Curves.easeInOut,
-      width: 50,
-      height: 50,
+      width: 35,
+      height: 35,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         border: Border.all(
           color: isSelected ? AppColors.primaryColor : AppColors.bgColor,
-          width: 5,
+          width: 4,
         ),
       ),
       child: CircleAvatar(backgroundImage: AssetImage(image)),

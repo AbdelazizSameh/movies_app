@@ -22,4 +22,9 @@ abstract class AppAssets {
       'assets/images/icons/visibility_on.png';
   static const String visibilityOffIcon =
       'assets/images/icons/visibility_off.png';
+
+  /// home
+  static const String availableNow = 'assets/images/home/available_now.png';
+  static const String watchNow = 'assets/images/home/watch_now.png';
+  static const String arrow = 'assets/images/home/arrow.png';
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:movies_app/Features/home/presentation/views/home_view.dart';
 import 'package:movies_app/core/utils/app_router.dart';
 import 'core/utils/app_colors.dart';
 import 'core/utils/app_fonts.dart';
@@ -15,12 +15,13 @@ class MoviesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      routerConfig: AppRouter.routerConfig,
       theme: ThemeData(
         fontFamily: AppFonts.fontInter,
         scaffoldBackgroundColor: AppColors.bgColor,
         brightness: Brightness.dark,
       ),
+      routerConfig: AppRouter.routerConfig,
+      // home: HomeView(),
     );
   }
 }
