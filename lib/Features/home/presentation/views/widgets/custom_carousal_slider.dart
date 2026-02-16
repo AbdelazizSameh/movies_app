@@ -1,18 +1,16 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import '../../../../../core/utils/app_assets.dart';
 import 'movie_item.dart';
 
 class CustomeCarousalSlider extends StatelessWidget {
-  const CustomeCarousalSlider({super.key, required this.onPageChanged});
+  const CustomeCarousalSlider({
+    super.key,
+    required this.onPageChanged,
+    required this.list,
+  });
   final Function(int) onPageChanged;
 
-  static var list = [
-    AppAssets.doctorStrange,
-    AppAssets.badBoys,
-    AppAssets.avengers,
-    AppAssets.postersGroup,
-  ];
+  final List<String> list;
 
   @override
   Widget build(BuildContext context) {

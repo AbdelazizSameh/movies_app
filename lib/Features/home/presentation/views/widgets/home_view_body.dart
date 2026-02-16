@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:movies_app/core/utils/app_assets.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/widgets/linear_gradient_widget.dart';
+import 'custom_animated_fade_image.dart';
 import 'home_view_body_details.dart';
 
 class HomeViewBody extends StatefulWidget {
@@ -23,7 +24,8 @@ class _HomeViewBodyState extends State<HomeViewBody> {
 
   @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.sizeOf(context).height;
+    var screenSize = MediaQuery.sizeOf(context);
+    var height = screenSize.height;
     return Stack(
       fit: StackFit.expand,
       children: [
@@ -31,18 +33,17 @@ class _HomeViewBodyState extends State<HomeViewBody> {
           left: 0,
           right: 0,
           top: 0,
-          bottom: height * 0.32,
-          child: Image.asset(
-            movies[currentIndex],
-            key: ValueKey(movies[currentIndex]),
-            fit: BoxFit.fill,
+          bottom: height * 0.3,
+          child: CustomeAnimatedFadeImage(
+            movies: movies,
+            currentIndex: currentIndex,
           ),
         ),
         Positioned(
           left: 0,
           right: 0,
           top: 0,
-          bottom: height * 0.32,
+          bottom: height * 0.3,
           child: const LinearGradientWidget(
             colors: [AppColors.bgColorAlpa, AppColors.bgColor],
           ),
@@ -57,6 +58,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                 currentIndex = index;
               });
             },
+            list: movies,
           ),
         ),
       ],
