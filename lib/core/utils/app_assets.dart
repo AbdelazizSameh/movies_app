@@ -27,4 +27,8 @@ abstract class AppAssets {
   static const String availableNow = 'assets/images/home/available_now.png';
   static const String watchNow = 'assets/images/home/watch_now.png';
   static const String arrow = 'assets/images/home/arrow.png';
+  static const String home = 'assets/images/icons/home.png';
+  static const String search = 'assets/images/icons/search.png';
+  static const String explore = 'assets/images/icons/explore.png';
+  static const String profile = 'assets/images/icons/profile.png';
 }

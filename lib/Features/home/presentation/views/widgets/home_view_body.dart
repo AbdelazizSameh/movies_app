@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/utils/app_assets.dart';
+import '../../../../../core/utils/app_assets.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/widgets/linear_gradient_widget.dart';
+import 'bottom_navigation_bar_section.dart';
 import 'custom_animated_fade_image.dart';
 import 'home_view_body_details.dart';
 
@@ -48,18 +49,18 @@ class _HomeViewBodyState extends State<HomeViewBody> {
             colors: [AppColors.bgColorAlpa, AppColors.bgColor],
           ),
         ),
+        Positioned.fill(
+          child: HomeViewBodyDetails(
+            onPageChanged: (index) => setState(() => currentIndex = index),
+            list: movies,
+          ),
+        ),
+
         Positioned(
           left: 0,
           right: 0,
-          top: 30,
-          child: HomeViewBodyDetails(
-            onPageChanged: (index) {
-              setState(() {
-                currentIndex = index;
-              });
-            },
-            list: movies,
-          ),
+          bottom: 10,
+          child: const BottomNavigationBarSection(),
         ),
       ],
     );

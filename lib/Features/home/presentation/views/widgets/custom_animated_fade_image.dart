@@ -12,6 +12,8 @@ class CustomeAnimatedFadeImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.sizeOf(context);
+    var width = screenSize.width;
     return AnimatedSwitcher(
       transitionBuilder: (child, animation) =>
           FadeTransition(opacity: animation, child: child),
@@ -21,7 +23,7 @@ class CustomeAnimatedFadeImage extends StatelessWidget {
         movies[currentIndex],
         key: ValueKey(movies[currentIndex]),
         fit: BoxFit.fill,
-        width: double.maxFinite,
+        width: width,
       ),
     );
   }

@@ -26,7 +26,7 @@ class CustomeCarousalSlider extends StatelessWidget {
   CarouselOptions customCarousalOptions() {
     return CarouselOptions(
       autoPlay: true,
-      height: 340,
+      height: 310,
       viewportFraction: 0.54,
       enlargeCenterPage: true,
       onPageChanged: (index, reason) => onPageChanged(index),
